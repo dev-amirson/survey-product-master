@@ -1,0 +1,105 @@
+@import 'variables' ;
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $light-grey;
+
+  .cancel-card {
+    width: 43.75rem;
+    height: 27.5rem;
+    box-shadow: 0 -4px 7px 0 rgba(0, 0, 0, 0.11), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: $white;
+
+    .close-icon {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+
+      .tag-wrapper {
+        width: $col-1;
+      }
+
+      .tag-icon {
+        margin-left: 0.4rem;
+        margin-top: 1.2rem;
+      }
+
+      .content-container {
+        width: $col-11;
+        flex-direction: column;
+        margin-left: 2.42rem;
+        margin-top: -0.5rem;
+
+        .discount-heading {
+          margin-top: -7px;
+        }
+
+        .description {
+          color: $grey;
+          line-height: 2rem;
+          width: 95%;
+        }
+
+        .discount-description {
+          color: $grey;
+          font-weight: bold;
+          margin-top: 3rem;
+          font-size: 0.93;
+        }
+
+        .safe-description {
+          color: $grey;
+          margin-top: 2rem;
+        }
+
+        .actions {
+          display: table;
+          flex-direction: row;
+          margin-top: 3.2rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 694px) {
+    .cancel-card {
+      height: 28rem;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .cancel-card {
+      height: 33rem;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .cancel-card {
+      height: 38rem;
+
+      .heading {
+        font-size: 1.4rem;
+        max-width: 93%;
+      }
+
+      .tag-icon {
+        margin-top: 1.2rem !important;
+        margin-left: -0.5rem !important;
+        width: 3.5rem !important;
+        height: 3.2rem !important;
+      }
+    }
+  }
+}
